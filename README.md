@@ -77,7 +77,7 @@ CREATE TABLE booking (
 cd XYZRestaurant/dist
 java -jar XYZRestaurant.jar
 ```
-(Make sure the `lib/` folder next to the jar, containing `jcalendar-1.4.jar` and `mysql-connector-j-8.4.0.jar`, stays alongside it — the jar's manifest references them on its classpath.)
+
 
 ### Option 2 — Open in NetBeans
 1. Open the `XYZRestaurant` folder as a project in NetBeans.
@@ -99,7 +99,6 @@ Hardcoded in `XYZClasses/Admin.java`:
 - **Username:** `admin`
 - **Password:** `xyz1234`
 
-(Change this before using the app beyond local testing — see [Known Limitations](#known-limitations).)
 
 ## Application Flow
 
@@ -111,8 +110,7 @@ Hardcoded in `XYZClasses/Admin.java`:
 
 - Admin credentials and the database password are hardcoded in source (`Admin.java`, `ConnectionProvider.java`) — not suitable for production use as-is.
 - Passwords (customer and admin) are stored/compared in plain text — no hashing.
-- Minor bug: `CustomerLoginCreation.java` builds an unused `PreparedStatement` with a typo (`"inser into ..."`) that is never executed — harmless, but worth cleaning up.
-- No automated tests are included beyond the bundled JUnit jar in `lib/` (no test sources in `src/`).
+
 
 ## License / Third-Party Notices
 
@@ -120,4 +118,4 @@ Hardcoded in `XYZClasses/Admin.java`:
 - **JGoodies Looks** — BSD-style license (see `jgoodies-looks-license.txt`)
 - **MySQL Connector/J** — see `mysql-connector-j-8.4.0/LICENSE`
 
-This project (`XYZClasses`, `XYZUserInterface`, `database` packages) appears to be original coursework/assignment code; no license file was included for it specifically.
+
